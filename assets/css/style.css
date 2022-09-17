@@ -68,6 +68,26 @@ header {
   justify-content: space-between;
 }
 
+header .animation img {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  animation-name: fly;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fly {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 10%;
+    }
+}
+
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -299,6 +319,24 @@ form input[type=subscribe]:active {
   header {
     padding-bottom: 4rem;
   }
+  header .animation img {
+    width: 200px;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes fly {
+      0% {
+        top: 0;
+      }
+      100% {
+        top: 15%;
+      }
+  }
   .logo {
     padding-bottom: 3rem;
   }
@@ -324,6 +362,12 @@ form input[type=subscribe]:active {
   }
   .logo {
     padding-bottom: 4rem;
+  }
+  .teaser {
+    padding-bottom: 3rem;
+  }
+  .animation {
+    display: none;
   }
   main section {
     padding: 2rem;
