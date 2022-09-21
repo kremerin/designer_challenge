@@ -43,8 +43,6 @@ body {
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.2;
-  width: 1440px;
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -70,8 +68,8 @@ header {
 
 header .animation img {
   position: absolute;
-  right: 10%;
-  top: 10%;
+  right: 13%;
+  top: 20%;
   animation-name: fly;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -82,16 +80,16 @@ header .animation img {
       top: 0;
     }
     100% {
-      top: 10%;
+      top: 20%;
     }
 }
-
-
 
 .logo {
   display: flex;
   align-items: center;
   padding: 2rem;
+  position: absolute;
+  top: 0;
 }
 
 .logo article {
@@ -123,7 +121,11 @@ header span {
 }
 
 main section {
-  padding: 5rem 4rem;
+  padding: 5rem 12rem;
+}
+
+.examples {
+  padding: 5rem 0;
 }
 
 .textBig {
@@ -258,7 +260,7 @@ form input {
 }
 
 form input[type=email] {
-  width: 100%;
+  width: 70%;
   padding: 1rem 0;
   margin: 1.5rem 0;
   text-align: center;
@@ -310,7 +312,24 @@ form input[type=subscribe]:active {
   background: linear-gradient(90deg, rgba(60,48,255,1) 0%, rgba(255,53,113,1)100%);
 }
 
+@media only screen and (max-width: 1400px) and (min-width: 801px) {
+  header .animation img {
+    width: 400px;
+    top: 10%
+  }
 
+  @keyframes fly {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 10%;
+    }
+  }
+  main section {
+    padding: 5rem 6rem;
+  }
+}
 
 @media only screen and (max-width: 800px) and (min-width: 600px){
   h2 {
@@ -361,6 +380,7 @@ form input[type=subscribe]:active {
     padding-bottom: 4rem;
   }
   .logo {
+    position: relative;
     padding-bottom: 4rem;
   }
   .teaser {
@@ -383,6 +403,9 @@ form input[type=subscribe]:active {
   }
   .textCenter {
     width: 100%;
+  }
+  .list ul li {
+    flex: 1 1 100%;
   }
   .step {
     flex-direction: column;
